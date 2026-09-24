@@ -41,10 +41,10 @@ Do not edit `_layouts/`, `_includes/`, `_sass/` or `assets/` for routine content
 Add one line in the appropriate section of `content/publications.md`, following the existing format:
 
 ```markdown
-1. Zhao, X. and Coauthor, A. (2027). *Paper title*. Journal name. [DOI](https://doi.org/example).
+- **Zhao, X.** and Coauthor, A. (2027). *Paper title*. Journal name, 12(3), 45–56. [DOI](https://doi.org/example)
 ```
 
-Markdown will renumber the list automatically, so every item may start with `1.`. Add published work under `Peer-reviewed journal articles` and unpublished work under `Manuscripts under review`.
+Each line beginning with `- ` appears as a bullet point. Add a new preprint under `Preprints` and a peer-reviewed paper under its publication year in `Peer-reviewed publications`. Within each year, place first-author papers before co-authored papers without adding separate labels.
 
 ### Replacing the avatar or adding images
 
