@@ -1,101 +1,174 @@
-# Academic Pages
-**Academic Pages is a GitHub Pages template for personal and professional portfolio-oriented websites.**
+# Xuebin Zhao | Academic Website
 
-![Academic Pages template example](images/themes/homepage-light.png "Academic Pages template example")
+Source files for my academic website: <https://xuebinzhaozxb.github.io/>.
 
-# Getting Started
+The site is published automatically through GitHub Pages. After committing and pushing changes to GitHub, the website will normally update within a few minutes.
 
-1. Register a GitHub account if you don't have one and confirm your e-mail (required!)
-1. Click the "Use this template" button in the top right.
-1. On the "New repository" page, enter your public repository name as "[your GitHub username].github.io", which will also be your website's URL.
-1. Edit site-wide configuration in `_config.yml` and double check that the `url` is the one that you just selected in the previous step and that `repository` reflects the correct path for your repository.
-1. Add your site content, upload any files (like PDFs, .zip files, etc.) to the `files/` directory. They will appear at https://[your GitHub username].github.io/files/example.pdf.
-1. Check status by going to the repository settings, in the "GitHub pages" section
-1. (Optional) Use the Jupyter notebooks or python scripts in the `markdown_generator` folder to generate markdown files for publications and talks from a TSV file.
+## The files you will edit most often
 
-See more info at https://academicpages.github.io/
+For routine website updates, start with the `content` folder:
 
-### Additional Tutorials
+| What you want to update | File to edit |
+| --- | --- |
+| Homepage biography | `content/about.md` |
+| Research overview | `content/research.md` |
+| Publication list | `content/publications.md` |
+| Teaching and student supervision | `content/teaching.md` |
+| CV overview | `content/cv.md` |
 
-Additional tutorials for working with the Academic Pages template can be found at the following sites:
-- https://jayrobwilliams.com/posts/2020/06/academic-website/
+These are Markdown files and can be edited directly in VS Code. Saving a file does not require you to generate the website manually.
 
-## Running locally
+There are also three important locations used less often:
 
-When you are initially working on your website, it is very useful to be able to preview the changes locally before pushing them to GitHub. To work locally you will need to:
+| Content | Location |
+| --- | --- |
+| Name, position, email, academic-profile links and avatar filename | The `author:` section of `_config.yml` |
+| Navigation bar | `_data/navigation.yml` |
+| Images, PDFs and supplementary material | `images/`; create `files/` when you need to upload PDFs |
 
-1. Clone the repository and made updates as detailed above.
+Do not edit `_layouts/`, `_includes/`, `_sass/` or `assets/` for routine content updates. They contain the site template and styling code.
 
-### Using a different IDE
-1. Make sure you have ruby-dev, bundler, and nodejs installed
-    
-    On most Linux distributions and [Windows Subsystem Linux](https://learn.microsoft.com/en-us/windows/wsl/about) the command is:
-    ```bash
-    sudo apt install ruby-dev ruby-bundler nodejs
-    ```
-    If you see error `Unable to locate package ruby-bundler`, `Unable to locate package nodejs `, run the following:
-    ```bash
-    sudo apt update && sudo apt upgrade -y
-    ```
-    then try running `sudo apt install ruby-dev ruby-bundler nodejs` again.
+## Simple Markdown rules
 
-    On MacOS the commands are:
-    ```bash
-    brew install ruby
-    brew install node
-    gem install bundler
-    ```
-1. Run `bundle install` to install ruby dependencies. If you get errors, delete Gemfile.lock and try again.
+- Start a heading with `#` or `##`; use `##` for major sections within a page.
+- Start each list item with `- `.
+- Create a link with `[link text](https://example.com)`.
+- Add two spaces before a line break to place an institution and a year on separate lines within a list item.
+- The text between the first `---` and the second `---` in each content file contains page settings. Normally, leave it unchanged and edit the text below it.
 
-    If you see file permission error like `Fetching bundler-2.6.3.gem ERROR:  While executing gem (Gem::FilePermissionError) You don't have write permissions for the /var/lib/gems/3.2.0 directory.` or `Bundler::PermissionError: There was an error while trying to write to /usr/local/bin.`
-    Install Gems Locally (Recommended):
-    ```bash
-    bundle config set --local path 'vendor/bundle'
-    ```
-    then try run `bundle install` again. If succeeded, you should see a folder called `vendor` and `.bundle`.
+### Updating publications
 
-1. Run `jekyll serve -l -H localhost` to generate the HTML and serve it from `localhost:4000` the local server will automatically rebuild and refresh the pages on change to Markdown (*.md) and HTML files, while changes to the core template and configuration (i.e., `_config.yml`) will require stopping and restarting Jekyll.
-    You may also try `bundle exec jekyll serve -l -H localhost` to ensure jekyll to use specific dependencies on your own local machine.
+Add one line in the appropriate section of `content/publications.md`, following the existing format:
 
-If you are running on Linux it may be necessary to install some additional dependencies prior to being able to run locally: `sudo apt install build-essential gcc make`
-
-## Using Docker
-
-Working from a different OS, or just want to avoid installing dependencies? You can use the provided `Dockerfile` to build a container that will run the site for you if you have [Docker](https://www.docker.com/) installed.
-
-You can build and execute the container by running the following command in the repository:
-
-```bash
-chmod -R 777 .
-docker compose up
+```markdown
+1. Zhao, X. and Coauthor, A. (2027). *Paper title*. Journal name. [DOI](https://doi.org/example).
 ```
 
-You should now be able to access the website from `localhost:4000`.
+Markdown will renumber the list automatically, so every item may start with `1.`. Add published work under `Peer-reviewed journal articles` and unpublished work under `Manuscripts under review`.
 
-### Using the DevContainer in VS Code
+### Replacing the avatar or adding images
 
-If you are using [Visual Studio Code](https://code.visualstudio.com/) you can use the [Dev Container](https://code.visualstudio.com/docs/devcontainers/containers) that comes with this Repository. Normally VS Code detects that a development container configuration is available and asks you if you want to use the container. If this doesn't happen you can manually start the container by **F1->DevContainer: Reopen in Container**. This restarts your VS Code in the container and automatically hosts your academic page locally on http://localhost:4000. All changes will be updated live to that page after a few seconds.
+1. Put the image in `images/`, using a lowercase English filename with hyphens, for example `conference-2027.jpg`.
+2. To use an image as the sidebar avatar, enter its filename in `_config.yml`:
 
-# Maintenance
+```yaml
+avatar: "your-photo.jpg"
+```
 
-Bug reports and feature requests to the template should be [submitted via GitHub](https://github.com/academicpages/academicpages.github.io/issues/new/choose). For questions concerning how to style the template, please feel free to start a [new discussion on GitHub](https://github.com/academicpages/academicpages.github.io/discussions).
+The current avatar is `images/xuebin-zhao-avatar.jpg`.
 
-This repository was forked (then detached) by [Stuart Geiger](https://github.com/staeiou) from the [Minimal Mistakes Jekyll Theme](https://mmistakes.github.io/minimal-mistakes/), which is © 2016 Michael Rose and released under the MIT License (see LICENSE.md). It is currently being maintained by [Robert Zupko](https://github.com/rjzupkoii), and additional maintainers would be welcome.
+## Adding a News page
 
-## Bugfixes and enhancements
+Use News for appointments, publications, awards, conferences, talks or project updates. Create `content/news.md`, then copy and adapt the following:
 
-If you have bugfixes and enhancements that you would like to submit as a pull request, you will need to [fork](https://docs.github.com/en/pull-requests/collaborating-with-pull-requests/working-with-forks/fork-a-repo) this repository as opposed to using it as a template. This will also allow you to [synchronize your copy](https://docs.github.com/en/pull-requests/collaborating-with-pull-requests/working-with-forks/syncing-a-fork) of the template to your fork as well.
-
-Unfortunately, one logistical issue with a template theme like Academic Pages that makes it a little tricky to get bug fixes and updates to the core theme. If you use this template and customize it, you will probably get merge conflicts if you attempt to synchronize, although [rebasing](https://git-scm.com/docs/git-rebase) the changes from this template will work along with manually [cherry picking](https://git-scm.com/docs/git-cherry-pick) the relevant commits. If you are not comfortable with the Git command line, you can save your various `.yml` configuration files and Markdown files, delete the repository, and fork it again. 
-
+```markdown
 ---
-<div align="center">
-    
-![pages-build-deployment](https://github.com/academicpages/academicpages.github.io/actions/workflows/pages/pages-build-deployment/badge.svg)
-[![GitHub contributors](https://img.shields.io/github/contributors/academicpages/academicpages.github.io.svg)](https://github.com/academicpages/academicpages.github.io/graphs/contributors)
-[![GitHub release](https://img.shields.io/github/v/release/academicpages/academicpages.github.io)](https://github.com/academicpages/academicpages.github.io/releases/latest)
-[![GitHub license](https://img.shields.io/github/license/academicpages/academicpages.github.io?color=blue)](https://github.com/academicpages/academicpages.github.io/blob/master/LICENSE)
+layout: archive
+title: "News"
+permalink: /news/
+author_profile: true
+---
 
-[![GitHub stars](https://img.shields.io/github/stars/academicpages/academicpages.github.io)](https://github.com/academicpages/academicpages.github.io)
-[![GitHub forks](https://img.shields.io/github/forks/academicpages/academicpages.github.io)](https://github.com/academicpages/academicpages.github.io/fork)
-</div>
+## 2027
+
+- **January 2027** — Add a short update here.
+
+## 2026
+
+- **September 2026** — Add a short update here.
+```
+
+Then open `_data/navigation.yml` and add the following under `main:`:
+
+```yaml
+  - title: "News"
+    url: /news/
+```
+
+Keep the newest items at the top. If a full blog-style news system is needed later, `_posts/` can be enabled again; a static News page is simpler and well suited to an academic website.
+
+## Adding a team or students page
+
+Create `content/team.md` with this structure:
+
+```markdown
+---
+layout: archive
+title: "Students and collaborators"
+permalink: /team/
+author_profile: true
+---
+
+## Current students
+
+- **Name** — PhD student, University of Edinburgh. Topic: ...
+
+## Former students
+
+- **Name** — Degree, graduation year. Current position: ...
+```
+
+Then add this entry to `_data/navigation.yml`:
+
+```yaml
+  - title: "Team"
+    url: /team/
+```
+
+If you only want to list students, change the page title to `Students` and the URL to `/students/`.
+
+## Adding a Chinese version
+
+The recommended approach is to keep English as the main site and create parallel Chinese pages inside `content/zh/`. For example, create `content/zh/index.md` for the Chinese homepage:
+
+```markdown
+---
+layout: archive
+title: "赵学彬"
+permalink: /zh/
+author_profile: true
+---
+
+Write the Chinese biography here.
+```
+
+Create `content/zh/research.md` for the Chinese research page and set:
+
+```yaml
+permalink: /zh/research/
+```
+
+The same pattern can be used for `/zh/publications/`, `/zh/teaching/` and `/zh/cv/`. Finally, add this to the navigation bar:
+
+```yaml
+  - title: "中文"
+    url: /zh/
+```
+
+It is best to create the Chinese homepage first and add the other pages gradually. English and Chinese pages are separate, so both versions need to be updated when content changes.
+
+## Publishing changes to GitHub
+
+In the Source Control panel in VS Code:
+
+1. Review the files changed in this update.
+2. Click `+` to stage the changes you want to publish.
+3. Write a short commit message, such as `Update publications`.
+4. Click **Commit**.
+5. Click **Sync Changes** or **Push**.
+
+After pushing, visit the repository's **Actions** page or wait a few minutes and refresh the website. If the page does not change, first confirm that the push succeeded, then check the GitHub Pages deployment status.
+
+## Pre-publication checklist
+
+- The links on About, Research, Publications, Teaching and CV all work.
+- Publication years, authors, journal names and manuscript statuses are accurate.
+- Email, Google Scholar, ResearchGate and GitHub links are correct.
+- New images are stored in `images/` and display correctly.
+- No CV documents, certificates, private photographs, student information or unpublished material are uploaded unintentionally.
+
+## Credits and licence
+
+This website is built with [AcademicPages](https://academicpages.github.io/), which is based on the [Minimal Mistakes](https://mmistakes.github.io/minimal-mistakes/) Jekyll theme. Both are released under the MIT License. The [`LICENSE`](LICENSE) file is retained in this repository; please keep the licence and relevant copyright notices when modifying or reusing the website code.
+
+Website text, photographs and research content are copyright Xuebin Zhao unless otherwise stated.
