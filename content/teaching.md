@@ -27,6 +27,6 @@ I enjoy helping students develop both physical intuition and practical tools for
 
 ## Teaching development
 
-- **Lecture observation in Geophysical Imaging and Inversion**  
+- **Lecture observation** in *Geophysical Imaging and Inversion*  
   University of Edinburgh · 2026–present  
   Observing Professor Andrew Curtis's teaching as part of ongoing teaching development.
