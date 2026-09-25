@@ -37,3 +37,14 @@
     "layout/sidebar",
     "layout/json_cv"
 ;
+
+/* Personal sidebar sizing */
+@include breakpoint($large) {
+  .sidebar .author__avatar img {
+    max-width: 220px;
+  }
+
+  .sidebar .author__name {
+    font-size: $type-size-4;
+  }
+}
