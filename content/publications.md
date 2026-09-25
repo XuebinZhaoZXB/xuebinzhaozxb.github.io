@@ -43,9 +43,9 @@ author_profile: true
 
 ### 2022
 
-- **Zhao, X.**, Curtis, A. and Zhang, Z. (2022). *Interrogating subsurface structures using probabilistic tomography: An example assessing the volume of Irish Sea Basins*. *Journal of Geophysical Research: Solid Earth*, 127, e2022JB024098. [DOI](https://doi.org/10.1029/2022JB024098)
+- **Zhao, X.**, Curtis, A. and Zhang, X. (2022). *Interrogating subsurface structures using probabilistic tomography: An example assessing the volume of Irish Sea Basins*. *Journal of Geophysical Research: Solid Earth*, 127, e2022JB024098. [DOI](https://doi.org/10.1029/2022JB024098)
 
-- **Zhao, X.**, Curtis, A. and Zhang, Z. (2022). *Bayesian seismic tomography using normalizing flows*. *Geophysical Journal International*, 228(1), 213–239. [DOI](https://doi.org/10.1093/gji/ggab298)
+- **Zhao, X.**, Curtis, A. and Zhang, X. (2022). *Bayesian seismic tomography using normalizing flows*. *Geophysical Journal International*, 228(1), 213–239. [DOI](https://doi.org/10.1093/gji/ggab298)
 
 - Wang, Y., Bai, M., Yang, L., **Zhao, X.**, Saad, O. M. and Chen, Y. (2022). *An unsplit CFS-PML scheme for the second-order wave equation with its application in fractional viscoacoustic simulation*. *IEEE Transactions on Geoscience and Remote Sensing*, 60, 5905211. [DOI](https://doi.org/10.1109/TGRS.2021.3092714)
 
