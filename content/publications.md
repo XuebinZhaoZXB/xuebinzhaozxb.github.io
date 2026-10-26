@@ -6,12 +6,21 @@ author_profile: true
 ---
 
 ## Preprints
+- **Zhao, X.** and Curtis, A. (2026). *Bayesian Geophysical Inversion using Stein Mixture Variational Inference for Multimodal or Complex Solutions*.  Preprint; in preparation for journal submission. [arXiv](https://doi.org/10.48550/arXiv.2610.23603)
 
 - **Zhao, X.**, Curtis, A. and Mosegaard, K. (2026). *Designing solutions to geophysical inverse problems by changing variables*. Preprint; in preparation for journal submission. [arXiv](https://doi.org/10.48550/arXiv.2604.26937)
 
 - **Zhao, X.** and Curtis, A. (2025). *A semi-analytic but biased uncertainty assessment method using sample extensions, analysed for travel time tomography*. Submitted to *Seismica*; major revision. [arXiv](https://arxiv.org/abs/2507.16353)
 
-- Liu, Q., Fisher, M., Shen, Z., **Zhao, X.**, Tant, K., Curtis, A. and Oates, C. (2025). *Detecting model misspecification in Bayesian inverse problems via variational gradient descent*. Submitted to *Bayesian Analysis*; major revision. [arXiv](https://doi.org/10.48550/arXiv.2512.01667)
+- Smith, J.A., Curtis, A., Lythgoe, K., Townend, J. and **Zhao, X.** (2026). *Interrogating Variational Bayesian Synchronous and Asynchronous Ambient-Noise Seismic Tomography of the South Island, New Zealand*. Submitted to *Journal of Geophysical Research: Solid Earth*. [ESS Open Archive](https://doi.org/10.22541/essoar.15008110/v1)
+
+- Roy, P., **Zhao, X.** and Curtis, A. (2026). *Bayesian Inversion Beyond the Generator's Range: Reducing Non-physical Constraints from Generative Neural Networks*; major revision. Submitted to *Geophysical Journal International*. [arXiv](https://doi.org/10.48550/arXiv.2610.16614)
+
+
+## Papers in press
+
+- Liu, Q., Fisher, M., Shen, Z., **Zhao, X.**, Tant, K., Curtis, A. and Oates, C. (2026). *Detecting model misspecification in Bayesian inverse problems via variational gradient descent*. *Bayesian Analysis*, in press. Preprint available [here](https://doi.org/10.48550/arXiv.2512.01667).
+
 
 ## Peer-reviewed publications
 
